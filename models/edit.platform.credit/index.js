@@ -82,12 +82,10 @@ module.exports = putCompany = async (req, res) => {
       }
 
       return res.status(200).send({
-        จำนวนคนที่อยู่ในระดับจังหวัด: difMemberProvice,
-        จำนวนคนที่อยู่ในระดับอำเภอ: difMemberDistrict,
-        จำนวนคนที่อยู่ในระดับตำบล: difMemberSubDistrict,
-        กำไรบริษัท: value_office,
-        // จังหวัด: filterProvince,
-        // ตำบล: filterLevelSubDistrict,
+        provice: difMemberProvice,
+        district: difMemberDistrict,
+        subdistrict: difMemberSubDistrict,
+        profit: value_office,
         status: true,
       });
     });
