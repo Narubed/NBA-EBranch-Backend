@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.post(api + "/change_credit", require("./models/edit.platform.credit"));
+app.get(api + "/mobile_topup", require("./models/mobile_topup/get.all.topup_order"));
 
 app.get(api + "/members", require("./models/get.all.members"));
 app.listen(PORT, () => {
